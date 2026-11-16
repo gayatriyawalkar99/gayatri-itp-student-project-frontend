@@ -1,0 +1,374 @@
+
+/* ================= LOGIN PAGE ================= */
+
+.login-page {
+  min-height: calc(100vh - 70px);
+  background: #f3f6fb;
+  padding: 55px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.login-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(16, 43, 80, 0.12);
+  min-height: 570px;
+}
+
+/* ================= LEFT SECTION ================= */
+
+.login-welcome {
+  height: 100%;
+  min-height: 570px;
+  background: linear-gradient(145deg, #102b50, #1c5488);
+  padding: 45px 35px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-welcome::before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+}
+
+.login-welcome::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  bottom: -90px;
+  left: -90px;
+}
+
+.login-brand-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 18px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-welcome h2 {
+  font-size: 29px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-welcome > p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d5e3f2;
+  max-width: 330px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Illustration */
+
+.login-illustration {
+  margin-top: 35px;
+  padding: 25px 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.illustration-circle {
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  margin: 0 auto 20px;
+}
+
+.login-illustration h4 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.login-illustration span {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #d5e3f2;
+}
+
+.welcome-footer {
+  margin-top: auto;
+  padding-top: 25px;
+  font-size: 12px;
+  color: #b9cde2;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= RIGHT SECTION ================= */
+
+.login-form-section {
+  padding: 65px 55px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-heading {
+  margin-bottom: 35px;
+}
+
+.login-heading span {
+  color: #2865a5;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.login-heading h2 {
+  color: #102b50;
+  font-size: 29px;
+  font-weight: 750;
+  margin: 12px 0;
+}
+
+.login-heading p {
+  color: #8490a1;
+  font-size: 14px;
+}
+
+/* Form Inputs */
+
+.login-input-group {
+  margin-bottom: 23px;
+}
+
+.login-input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #263b55;
+  margin-bottom: 9px;
+}
+
+.login-input {
+  height: 48px;
+  padding: 10px 14px;
+  border: 1px solid #dce3ed;
+  border-radius: 7px;
+  font-size: 14px;
+  background: #fbfcfe;
+  box-shadow: none !important;
+}
+
+.login-input:focus {
+  border-color: #2865a5;
+  background: #ffffff;
+}
+
+.login-input::placeholder {
+  color: #a3adbb;
+}
+
+/* Password */
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .login-input {
+  padding-right: 65px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #2865a5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Error */
+
+.login-error {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #f3caca;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+/* Login Button */
+
+.login-submit-btn {
+  width: 100%;
+  height: 49px;
+  border: none;
+  border-radius: 7px;
+  background: #164b82;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+.login-submit-btn:hover:not(:disabled) {
+  background: #102b50;
+  box-shadow: 0 5px 15px rgba(22, 75, 130, 0.2);
+}
+
+.login-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Register Section */
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 20px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e5eaf0;
+}
+
+.login-divider span {
+  color: #98a3b2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.register-text {
+  text-align: center;
+  font-size: 14px;
+  color: #748196;
+}
+
+.register-text a {
+  color: #2865a5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Security Note */
+
+.login-security-note {
+  text-align: center;
+  color: #8793a4;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  .login-page {
+    padding: 35px 15px;
+  }
+
+  .login-welcome {
+    min-height: 400px;
+    padding: 35px 25px;
+  }
+
+  .login-illustration {
+    margin-top: 15px;
+  }
+
+  .login-form-section {
+    padding: 45px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-page {
+    padding: 20px 10px;
+  }
+
+  .login-card {
+    border-radius: 12px;
+  }
+
+  .login-welcome {
+    min-height: 350px;
+    padding: 30px 20px;
+  }
+
+  .login-brand-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .login-welcome h2 {
+    font-size: 25px;
+  }
+
+  .illustration-circle {
+    width: 95px;
+    height: 95px;
+    font-size: 48px;
+  }
+
+  .login-form-section {
+    padding: 35px 22px;
+  }
+
+  .login-heading h2 {
+    font-size: 25px;
+  }
+}
+
