@@ -11,10 +11,10 @@ export function AuthProvider({ children }) {
   function login(userData) {
     // Do not store the password in the current session.
     const safeUser = {
-      id: userData.id,
+      // id: userData.id,
       name: userData.name,
-      email: userData.email,
-      role: userData.role
+      // email: userData.email,
+      // role: userData.role
     };
     sessionStorage.setItem('currentUser', JSON.stringify(safeUser));
     setUser(safeUser);

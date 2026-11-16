@@ -31,45 +31,19 @@ export default function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    setError('');
-    setLoading(true);
-
     try {
+      const response = await API.post('/userLogin', form);
 
-      // Convert credentials into form-urlencoded format
-      const params = new URLSearchParams();
+      console.log(response.data);
 
-      params.append('username', form.username);
-      params.append('password', form.password);
-
-      // Call Spring Security login API
-      const response = await API.post('/login', params, {
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      });
-
-      // Update React authentication context
-      login({ username: form.username });
-
-      // Navigate after successful login
+      login({name:form.username})
       navigate('/show');
 
     } catch (error) {
-
-      console.error(error);
-
-      if (error.response?.status === 401) {
-        setError('Invalid username or password.');
-      } else {
-        setError(
-          error.response?.data?.message ||
-          'Unable to connect to server. Please try again.'
-        );
-      }
-
-    } finally {
-      setLoading(false);
+      setError(
+        error.response?.data?.message ||
+        'Login failed'
+      );
     }
   }
 
